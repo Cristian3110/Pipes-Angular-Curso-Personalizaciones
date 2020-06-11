@@ -162,11 +162,11 @@
                     <td>
                         Contraseña: {{ activar }}
                         <br />
-                        <button class="btn btn-outline-primary">
+                        <button (click)="activar = !activar" class="btn btn-outline-primary">
               Activar/Desactivar
             </button>
                     </td>
-                    <td>{{ nombre }}</td>
+                    <td>{{ nombre | password: activar }}</td>
                 </tr>
             </thead>
         </table>
